@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+      let Nombre = "Jeronimo";
+      let Edad = 19;   
+      let Email = "jeronimo@hotmail.com"; 
+      let EstadoSuscripcion = false; 
+      let NumeroPerfiles = 4;
+      let SeriesFavoritas = ["Vikingos", "The Walking Dead", "Lupin"];
+      let EdadConfirma = Edad > 18 ? true : false;
+      let UltimoInicioSesion = new Date('2024-08-01'); 
+    let DiasDesdeUltimoInicio = Math.floor((new Date() - UltimoInicioSesion) / (1000 * 60 * 60 * 24)); 
+    let PorcentajeCompletoPerfil = 0.6;       
+    let MensajeEstadoPerfil = PorcentajeCompletoPerfil > 0.5 ? "Perfil más de la mitad completo" : "Perfil menos de la mitad completo"; 
+
+    const FechaNacimiento = new Date('2005-05-15'); 
+    const FechaActual = new Date();                 
+    const DiferenciaAnios = Math.floor((FechaActual - FechaNacimiento) / (1000 * 60 * 60 * 24 * 365)); 
+    const PerfilUsuario = {                       
+        nombre: Nombre,
+        edad: Edad,
+        email: Email,
+        suscripcion: EstadoSuscripcion
+    };
+    const MensajeSaludo = `Hola ${Nombre}, ¡bienvenido de nuevo!`; 
+
+    const EstadoEmail = Email.includes("@") ? "El email es válido" : "El email no es válido"; 
+    const EstadoNumeroPerfiles = NumeroPerfiles > 3 ? "Tienes muchos perfiles" : "Tienes pocos perfiles"; 
+
+  
+    console.log('Valores de variables con let:');
+    console.log(`Nombre: ${Nombre}`);
+    console.log(`Edad: ${Edad}`);
+    console.log(`Email: ${Email}`);
+    console.log(`EstadoSuscripcion: ${EstadoSuscripcion}`);
+    console.log(`NumeroPerfiles: ${NumeroPerfiles}`);
+    console.log(`SeriesFavoritas: ${SeriesFavoritas}`);
+    console.log(`EdadConfirma: ${EdadConfirma}`);
+    console.log(`UltimoInicioSesion: ${UltimoInicioSesion.toDateString()}`);
+    console.log(`DiasDesdeUltimoInicio: ${DiasDesdeUltimoInicio}`);
+    console.log(`PorcentajeCompletoPerfil: ${PorcentajeCompletoPerfil}`);
+    console.log(`MensajeEstadoPerfil: ${MensajeEstadoPerfil}`);
+
+    console.log('\nValores de variables con const:');
+    console.log(`FechaNacimiento: ${FechaNacimiento.toDateString()}`);
+    console.log(`FechaActual: ${FechaActual.toDateString()}`);
+    console.log(`DiferenciaAnios: ${DiferenciaAnios}`);
+    console.log(`PerfilUsuario: `, PerfilUsuario);
+    console.log(`MensajeSaludo: ${MensajeSaludo}`);
+
+    console.log('\nUso del operador ternario:');
+    console.log(`EstadoEmail: ${EstadoEmail}`);
+    console.log(`EstadoNumeroPerfiles: ${EstadoNumeroPerfiles}`);
+
+    </script>
+    
+</body>
+</html>
+
